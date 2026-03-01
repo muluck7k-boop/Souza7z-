@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #000000, #111111);
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+h1 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.link-btn {
+    display: block;
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 16px;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.link-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
